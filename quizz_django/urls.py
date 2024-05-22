@@ -1,27 +1,14 @@
-"""
-URL configuration for quizz_django project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-import settings
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('waste.urls')),
+    path('', views.dashboard, name='dashboard'),
+    path('user', views.user, name='user'),
+    path('question_1/<int:person_id>', views.question_1, name='question_1'),
+    path('question_2/<int:person_id>', views.question_2, name='question_2'),
+    path('question_3/<int:person_id>', views.question_3, name='question_3'),
+    path('question_4/<int:person_id>', views.question_4, name='question_4'),
+    path('question_5/<int:person_id>', views.question_5, name='question_5'),
+    path('ranking', views.ranking, name='ranking'),
+    path('ranking/<int:person_id>', views.ranking, name='person_ranking'),
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

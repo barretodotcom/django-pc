@@ -9,8 +9,7 @@ from .models import Person
 
 # Create your views here.
 def dashboard(request: HttpRequest) -> HttpResponse:
-    print("testeee")
-    return render(request, '../waste/dashboard.html')
+    return render(request, 'waste/dashboard.html')
 
 
 def user(request: HttpRequest) -> HttpResponse:
