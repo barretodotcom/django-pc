@@ -1,5 +1,4 @@
 {
-    "framework": "django",
     "installCommand": "pipenv install",
     "buildCommand": "pipenv shell && python manage.py runserver",
     "routes": [
