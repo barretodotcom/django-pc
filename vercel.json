@@ -1,4 +1,5 @@
 {
+    "framework": "django",
     "build": [{
         "src":"quizz_django/wsgi.py",
         "use":"@vercel/python",
