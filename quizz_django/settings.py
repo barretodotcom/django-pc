@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'quizz_django.wsgi.application'
+WSGI_APPLICATION = 'quizz_django.wsgi.app'
 
 
 # Database
