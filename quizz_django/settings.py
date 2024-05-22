@@ -131,5 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL= os.path.join(BASE_DIR, 'waste', "static", "waste", "sprites")
 MEDIA_ROOT= BASE_DIR/'media'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'waste', "static")
-STATIC_ROOT = os.path.join(BASE_DIR, 'waste_build', 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'waste', 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, "waste_build")
+STATIC_URL = "static/"

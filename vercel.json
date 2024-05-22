@@ -24,5 +24,6 @@
             "src": "/(.*)",
             "dest": "quizz_django/wsgi.py"
         }
-    ]
+    ],
+    "outputDirectory": "waste_build"
 }
