@@ -1,10 +1,10 @@
 {
     "framework": "django",
-    "build": [{
+    "build": {
         "src":"quizz_django/wsgi.py",
         "use":"@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime":"python3.10.12" }
-    }],
+    },
     "routes": [
         {
             "src":"/(.*)",
