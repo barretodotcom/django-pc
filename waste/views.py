@@ -179,7 +179,7 @@ def question_5(request: HttpRequest, person_id: int) -> HttpResponse:
     return render(request, 'waste/question_5.html', context)
 
 
-def ranking(request: HttpRequest, person_id: int|None = None) -> HttpResponse:
+def ranking(request: HttpRequest, person_id: int = None) -> HttpResponse:
     qs = Person.objects.filter(quizz_end_time__isnull=False).annotate(
         finished_quizz_time=ExpressionWrapper(F('quizz_end_time') - F('quizz_start_time'), output_field=DurationField())
     )
