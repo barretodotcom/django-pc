@@ -4,7 +4,7 @@
     "buildCommand": "pipenv shell && python manage.py runserver",
     "builds": [
         {
-            "src": "quizz_django/views.py",
+            "src": "waste/views.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
