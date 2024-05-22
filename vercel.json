@@ -1,5 +1,5 @@
 {
-    "installCommand": "pipenv install",
+    "installCommand": "pip install pipenv && pipenv install",
     "buildCommand": "pipenv shell && python manage.py runserver",
     "routes": [
         {
